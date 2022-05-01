@@ -1,0 +1,21 @@
+{% extends 'library/base.html' %}
+{% block content %}
+<form action="" method="POST">
+    <table class="table">
+        <tr>
+            <th>{{ booklist.title.label }}</th>
+            <td>{{ booklist.title }}</td>
+        </tr>
+        <tr>
+            <th>{{ booklist.date.label }}</th>
+            <td>{{ booklist.date }}</td>
+        </tr>
+        <tr>
+            <th>{{ booklist.studentid.label }}</th>
+            <td>{{ booklist.studentid }}</td>
+        </tr>
+    </table>
+    <button type="submit" class="btn btn-primary">返却</button>
+    {% csrf_token %}
+</form>
+{% endblock content %}

@@ -124,3 +124,10 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# ログオンが必要なページに認証されていないユーザーがアクセスした場合にリダイレクトするURLを指定
+LOGIN_URL = '/library/login' 
+# ログオン後にリダイレクトされるURLを指定
+LOGIN_REDIRECT_URL = '/library/main'
+# ログアウト後にリダイレクトされるURLを指定
+LOGOUT_REDIRECT_URL='/library/login'
