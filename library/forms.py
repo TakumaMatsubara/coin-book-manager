@@ -6,7 +6,7 @@ class BookListCreateForm(forms.ModelForm):
     class Meta:
         model = BookList
         fields = '__all__'
-        #fields = ('title', 'date')
+        #fields = ('title', 'date', 'studentid')
 
 class LoginForm(AuthenticationForm):
     def __init__(self, *args, **kwargs):
