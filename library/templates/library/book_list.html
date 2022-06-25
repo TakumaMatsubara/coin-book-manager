@@ -9,6 +9,7 @@
         <tr>
             <th>タイトル</th>
             <th>貸出日時</th>
+            <th>学籍番号</th>
             <th>返却ボタン</th>
         </tr>
     </thead>
@@ -17,6 +18,7 @@
         <tr>
             <td>{{ book.title }}</td>
             <td>{{ book.date }}</td>
+            <td>{{ book.studentid }}</td>
             <!--book.pkをbook.idでもおｋ-->
             <td><a href="{% url 'library:return' book.id %}">返却</a></td>
         </tr>
