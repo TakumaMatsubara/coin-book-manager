@@ -5,8 +5,8 @@ from django.contrib.auth.forms import AuthenticationForm
 class BookListCreateForm(forms.ModelForm):
     class Meta:
         model = BookList
-        fields = '__all__'
-        #fields = ('title', 'date', 'studentid')
+        fields = ('title', 'date', 'studentid')
+        labels = {"title":"本のタイトル", "date":"貸出日", "studentid":"ユーザー名"}
 
 class LoginForm(AuthenticationForm):
     def __init__(self, *args, **kwargs):

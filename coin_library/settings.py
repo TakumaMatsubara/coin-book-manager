@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+# manage.pyが入っているフォルダを指す．__file__はこのファイル(settings.py)のことを指す．
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'coin_library.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,6 +1,6 @@
 from django.db import models
 from datetime import date
-
+import django
 
 # Create your models here.
 class UserList(models.Model):
@@ -17,7 +17,7 @@ class BookList(models.Model):
     id = models.AutoField(primary_key=True)
     studentid = models.ForeignKey(UserList, on_delete=models.CASCADE)
     title = models.CharField('本のタイトル', max_length=200)
-    date = models.DateField('本を借りた日', default = date.today())
-
+    date = models.DateField('本を借りた日', default = django.utils.timezone.now)
+# date.today()
     def __str__(self):
         return self.title

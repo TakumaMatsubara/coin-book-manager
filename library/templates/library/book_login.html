@@ -34,6 +34,8 @@
 
         <form action="" method="POST">
         {% csrf_token %}
+
+        <!-- formはviews.pyのform_classから -->
         {% for field in form %}
             <div class="form-group has-feedback">
             {{ field }}
@@ -49,7 +51,8 @@
 
             <!-- /.col -->
             <div class="col-xs-4">
-            <button type="submit" class="btn btn-primary btn-block btn-flat">ログイン</button>
+
+            <button type="submit" class="btn btn-primary btn-block btn-flat" value="" name="">ログイン</button>
             </div>
             <!-- /.col -->
         </div>
