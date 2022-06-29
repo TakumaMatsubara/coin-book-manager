@@ -1,20 +1,19 @@
 {% extends 'library/base.html' %}
 {% block content %}
 <form action="" method="POST">
-    <!-- {% csrf_token %}
-    {{ form.as_p }} -->
-    <!-- <button tyte="submit" name="submit">登録</button> -->
+
     <table class="table">
         <tr>
     
             <th>{{ form.title.label }}</th>
             <td>{{ form.title }}</td>
         </tr>
-        
+
         <tr>
             <th>{{ form.date.label }}</th>
             <td>{{ form.date }}</td>
         </tr>
+        
         <tr>
             <th>{{ form.studentid.label }}</th>
             <td>{{ form.studentid }}</td>

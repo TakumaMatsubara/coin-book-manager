@@ -3,10 +3,16 @@ from .models import BookList
 from django.contrib.auth.forms import AuthenticationForm
 
 class BookListCreateForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        # self.base_fields['studentid'].disabled = True
+        # self.base_fields['studentid'].disabled = True
+        super().__init__(*args, **kwargs)
+        self.fields['date'].widget.attrs['readonly'] = 'readonly'
+
     class Meta:
         model = BookList
         fields = ('title', 'date', 'studentid')
-        labels = {"title":"本のタイトル", "date":"貸出日", "studentid":"ユーザー名"}
+        labels = {"title":"本のタイトル", "date":"貸出日", "studentid":"学籍番号"}
 
 class LoginForm(AuthenticationForm):
     def __init__(self, *args, **kwargs):
