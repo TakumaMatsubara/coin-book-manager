@@ -1,1 +1,1 @@
-web: gunicorn coin_system.wsgi --log-file - 
+web: gunicorn coin_library.wsgi --log-file - 
