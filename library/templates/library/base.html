@@ -14,11 +14,11 @@
     <div class="container">
         <!-- navは他のページへのリンクなどに使う -->
         <nav class="nav">
-            <a class="nav-link">ユーザ名：{{ user.get_username }}</a>
+            <a class="nav-link"><h2>COIN図書館</h2></a>
             <!-- aタグでリンクをurlをはる（urls.pyから） -->
-            <a class="nav-link" href="{% url 'library:main' %}">一覧</a>
-            <a class="nav-link" href="{% url 'library:add' %}">追加</a>
-            <a class="nav-link" href="{% url 'library:logout' %}">ログアウト</a>
+            <a class="nav-link" href="{% url 'library:main' %}"><h3>一覧</h3></a>
+            <a class="nav-link" href="{% url 'library:add' %}"><h3>追加</h3></a>
+            <a class="nav-link" href="{% url 'library:logout' %}"><h3>ログアウト</h3></a>
         </nav>
         {% block content %}
         {% endblock %}

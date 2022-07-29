@@ -6,8 +6,7 @@ import django
 class UserList(models.Model):
     id = models.AutoField(primary_key=True)
     studentid = models.CharField('学籍番号', max_length=5)
-    username = models.CharField('ユーザー名', max_length=10)
-    userpassword = models.CharField('パスワード', max_length=200) #後で考える
+    username = models.CharField('ユーザー名', max_length=100)
 
     def __str__(self):
         return self.studentid

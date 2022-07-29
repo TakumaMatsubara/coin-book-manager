@@ -5,54 +5,42 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>coin_library</title>
+    <title >coin_library</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="{% static 'AdminLTE-2.4.12/bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="{% static 'AdminLTE-2.4.12/bower_components/font-awesome/css/font-awesome.min.css' %}">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="{% static 'AdminLTE-2.4.12/bower_components/Ionicons/css/ionicons.min.css' %}">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{% static 'AdminLTE-2.4.12/dist/css/AdminLTE.min.css' %}">
-    <!-- iCheck -->
-    <link rel="stylesheet" href="{% static 'AdminLTE-2.4.12/plugins/iCheck/square/blue.css' %}">
 
-    <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 
 <body class="hold-transition login-page">
     <div class="login-box">
-    <div class="login-logo">
-        <b>COIN図書館</b>
+    <div class="login-logo" style="text-align:center">
+        <b >COIN図書館</b>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg"><b>ログイン画面</b></p>
+        <p class="login-box-msg" style="text-align:center"><b>ログイン画面</b></p>
 
         <form action="" method="POST">
         {% csrf_token %}
 
         <!-- formはviews.pyのform_classから -->
         {% for field in form %}
-            <div class="form-group has-feedback">
+            <div class="form-group has-feedback" style="text-align:center">
             {{ field }}
             </div>
         {% endfor %}
+        <div class="alert alert-danger" role="alert">
         <div class="row">
 
             {% for error in form.non_field_errors %}
-            <div class="alert alert-danger" role="alert">
                 <p>{{ error }}</p>
             </div>
             {% endfor %}
 
             <!-- /.col -->
-            <div class="col-xs-4">
+            <div class="col-xs-4" style="text-align:center">
 
-            <button type="submit" class="btn btn-primary btn-block btn-flat" value="" name="">ログイン</button>
+            <button type="submit" class="btn btn-primary btn-block btn-flat" value="" name="" >ログイン</button>
             </div>
             <!-- /.col -->
         </div>
