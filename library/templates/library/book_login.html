@@ -29,12 +29,12 @@
             {{ field }}
             </div>
         {% endfor %}
-        <div class="alert alert-danger" role="alert">
+        <div class="alert alert-danger" role="alert" style="text-align:center">
         <div class="row">
 
             {% for error in form.non_field_errors %}
                 <p>{{ error }}</p>
-            </div>
+        </div>
             {% endfor %}
 
             <!-- /.col -->
